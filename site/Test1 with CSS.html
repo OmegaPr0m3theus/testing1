@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en" style="font-family:monospace;">
+<head>
+<title>CSS Testing Ground</title>
+<style>
+p {
+	color: blue;
+	font-size: 20px;
+	width: 500px;
+}
+h1 {
+	color: green;
+	font-size: 40px;
+	text-align: center;
+}
+
+.cool {
+	color: green;
+	font-size: 20px;
+	width: 500px;
+}
+#poop {
+	color: brown;
+	font-size: 20px;
+	width: 500px;
+	text-align: right;
+}
+
+#red, #orange {
+	color: orangered;
+	font-size: 20px;
+	width: 500px;
+	text-align: center;
+
+}
+
+.highlight {
+	font-size: 30px;
+	font-weight: bold;
+	font-style: italic;
+	background-color: darkgoldenrod;
+	border-style: solid;
+	border-color: black;
+	opacity: 0.5;
+}
+
+p.italic{
+	font-style: italic;
+	font-size: 20px;
+}
+
+section > article {
+	color: yellow;
+	background-color: black;
+	text-align: center;
+}
+
+article .darkblue {
+	color: darkblue;
+	text-align: center;
+}
+
+</style>
+</head>
+<body>
+	<center>
+		<header class="highlight">
+			<blockquote cite="https://knowyourmeme.com/memes/bee-movie-script-according-to-all-known-laws-of-aviation"><q>According to all known laws of aviation, there is no way that a bee should be able to fly. Its wings are too small to get its fat little body off the ground. The bee, of course, flies anyways. Because bees don't care what humans think is impossible.</q> - <del>Joe Mama, also known as</del> Barry B. Benson.</blockquote>
+		</header>
+	</center>
+	<h1 style="font-weight: bold;"><em><mark>CSS Testing Grounds</mark></em></h1>
+
+	<h2>Paragraph 1</h2>
+	<p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. </p>
+	<br>
+
+	<h2> Paragraph 2</h2>
+	<p>Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam, nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?</p>
+	<center>
+	<br>
+
+	<h2> Paragraph 3</h2>
+	<div class="cool" style="text-align: center;">
+		This paragraph right here will use the .cool class selector and the &lt;div&gt; element. Kinda interesting, no? However, one thing that needs to be pointed out is that the &lt;div&gt; element HAS to have class="cool" for it within the &lt and &gt symbols.
+	</div>
+	<br>
+
+	</center>
+	<h2> Paragraph 4</h2>
+	<div id="poop">
+		This paragraph right here will use the #poop id selector and the &lt;div&gt; element. It definitely is poop, as it's that same colour and not all that nice looking. Weird, no? However, one thing that needs to be pointed out is that the &lt;div&gt; element HAS to have id="poop" for it within the &lt and &gt symbols.
+	</div>
+	<br>
+
+	<center>
+	<h2> Paragraph 5</h2>
+	<div id="red">
+		This paragraph right here will use the #red id selector and the &lt;div&gt; element. However, one thing that needs to be pointed out is that the &lt;div&gt; element HAS to have id="red" for it within the &lt and &gt symbols. Also, since #red and #orange share the same style, using any of both ID will ield the same result. The colour of this paragraph is redorange.
+	</div>
+	</center>
+	<br>
+
+	<center>
+	<h2> Paragraph 6</h2>
+	<div id="orange">
+		This paragraph right here will use the #orange id selector and the &lt;div&gt; element. However, one thing that needs to be pointed out is that the &lt;div&gt; element HAS to have id="orange" for it within the &lt and &gt symbols. Also, since #red and #orange share the same style, using any of both ID will ield the same result. The colour of this paragraph is redorange.
+	</div>
+	</center>
+	<hr>
+	<p class="italic">
+		This has class italic and so this paragraph will appear italicised. However, this class will only work with paragraph! This is because the CCS selector is p.big. <strong>HOWEVER</strong>, another plot twist, it will appear blue because every paragraph, so p elements, automatically turn blue as previously made for Paragraph 1 and 2.
+	</p>
+	<hr>
+	<article>
+		<p>
+			This is a p inside an article, so p is a child of the article. So it will turn blue only, but the article doesnt affect the paragraph
+		</p>
+	</article>
+	<br>
+	<h2>
+		Child Selectors
+	</h2>
+	<section>
+		<article>
+			Article here is inside of a section, therefor the article is a child of the section. In the CSS style sheet, there is a rule where every child of a section that is an article, turns to yellow with black background and centered.
+		</article>
+	</section>
+	<br>
+	<article>
+		<section>
+			Here the article is inside of the section, so the opposite of the last paragraph, and so it will just remain white because it does not meet the article &gt section rule that was established earlier.
+		</section>
+	</article>
+	<br>
+	<h2>
+		Descendant Selector
+	</h2>
+	<article>
+		<div>
+			<div>
+				<div>
+					<div class="darkblue">
+						In this case there is a class="darkblue" inside a div inside a div inside a div inside an article. So, according to the descendant selector that was created (article .darkblue), everything that has the class darkblue AND is inside an article, at any level, will turn to darkblue and be centered.
+					</div>
+				</div>
+			</div>
+		</div>
+	</article>
+	<hr>
+	<br>
+	<center>
+		<div class="highlight">
+			WHAT THE ACTUAL FUCK IS GOING ON HERE? Well I set font-size to 30px, font-weight to bold, font-style to italic, background-color to darkgoldenrod, border-style to solid, border-colour to black, and opacity to 0.5. All of this with the class selection .highlight, which means anything with class="highlight" will get the same treatment as this. <sub> This little line is in subscript.</sub>
+
+		</div>
+	</center>
+</body>
+</html>
